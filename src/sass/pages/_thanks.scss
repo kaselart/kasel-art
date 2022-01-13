@@ -1,0 +1,45 @@
+@use "../abstracts/" as a;
+
+.thanks {
+  margin-top: calc(#{a.$height-header});
+  height: calc(100vh - #{a.$height-header});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__heading-primary {
+    //margin-top: 10rem;
+
+    padding: 0.5rem 0;
+    color: a.$color-white;
+    font-size: 5rem;
+    font-family: Archivo;
+    font-weight: 800;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
+  &__text {
+    color: a.$color-white;
+    font-size: 1.5rem;
+    font-family: Archivo;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    text-align: center;
+  }
+  &__smiley {
+    margin-top: 5rem;
+    color: a.$color-white;
+    font-size: 8rem;
+    font-family: Archivo;
+    font-weight: 400;
+    animation: spin 1.5s infinite 0.5s;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}

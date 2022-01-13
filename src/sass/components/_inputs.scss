@@ -1,0 +1,22 @@
+@use "../abstracts/" as a;
+
+input,
+textarea {
+  font-weight: 400;
+  font-size: 1.75rem;
+  padding: 1.5rem 1rem;
+  letter-spacing: 0.25rem;
+  color: #787586;
+}
+input {
+  min-width: 27rem;
+  max-width: 27rem;
+  min-height: 3rem;
+}
+
+textarea {
+  min-width: 27rem;
+  max-width: 27rem;
+  min-height: 8rem;
+  max-height: 12rem;
+}

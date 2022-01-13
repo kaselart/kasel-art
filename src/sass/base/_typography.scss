@@ -1,0 +1,30 @@
+@use "../abstracts/" as a;
+///RobotoMono
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono/RobotoMono-Bold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono/RobotoMono-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono/RobotoMono-Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../fonts/RobotoMono/RobotoMono-Regular.ttf");
+  font-weight: 200;
+}
+
+////FOUNDATION
+@font-face {
+  font-family: "VT323";
+  src: url("../fonts/VT323/VT323-Regular.ttf");
+  font-weight: 800;
+}

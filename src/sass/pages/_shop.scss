@@ -1,0 +1,21 @@
+@use "../abstracts/" as a;
+
+.shop {
+  font-family: "RobotoMono";
+  height: calc(100vh - #{a.$height-header});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__heading-primary {
+    //margin-top: 10rem;
+
+    padding: 0.5rem 0;
+    color: a.$color-white;
+    font-size: 5rem;
+
+    font-weight: 800;
+    letter-spacing: 1rem;
+    text-align: center;
+  }
+}

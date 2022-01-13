@@ -1,0 +1,15 @@
+@use "../abstracts/" as a;
+.footer {
+  font-family: "RobotoMono";
+  height: a.$height-footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: a.$color-black-25;
+  width: 100%;
+  &__text {
+    color: a.$color-white;
+    opacity: 0.5;
+    padding: 1rem 1rem;
+  }
+}

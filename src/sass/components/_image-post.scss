@@ -1,0 +1,11 @@
+.image-post {
+  display: flex;
+  justify-content: center;
+  min-width: 100vw;
+  &__image--box {
+    width: 100%;
+  }
+  &__image {
+    width: 100%;
+  }
+}

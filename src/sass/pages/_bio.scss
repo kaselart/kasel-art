@@ -1,0 +1,45 @@
+@use "../abstracts/" as a;
+
+.bio {
+  margin-top: calc(#{a.$height-header} + #{a.$margin-top-page});
+  padding: 0 9rem;
+  @include a.respond(mobile) {
+    padding: 0 4rem;
+  }
+  &__text--main {
+    text-indent: 3rem;
+    padding: 1rem 0;
+    color: a.$color-white;
+    font-size: 2rem;
+    font-family: Archivo;
+    font-weight: 200;
+    letter-spacing: 0.35rem;
+    line-height: 1.3;
+    @include a.respond(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+  &__text--secondary {
+    letter-spacing: 0.35rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    @include a.respond(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+  &__text--link {
+    letter-spacing: 0.225rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    opacity: 0.75;
+    cursor: pointer;
+    @include a.respond(mobile) {
+      font-size: 1.4rem;
+    }
+    &:visited,
+    &:link {
+      color: a.$color-white;
+      opacity: 0.5;
+    }
+  }
+}

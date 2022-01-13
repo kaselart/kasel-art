@@ -1,0 +1,33 @@
+@use "../abstracts/" as a;
+
+.socials {
+  background-color: transparent;
+  bottom: a.$height-footer;
+  right: 0;
+  position: fixed;
+  width: 10rem;
+  @include a.respond(mobile) {
+    width: 8rem;
+  }
+  height: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  transition: all 0.15s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.social-icon {
+  font-size: 2.75rem;
+  color: a.$color-white;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+  &:hover {
+    transform: scale(1.3);
+  }
+}
