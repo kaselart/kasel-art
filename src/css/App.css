@@ -354,7 +354,18 @@ textarea {
   width: 85%;
 }
 .featured__item .title {
-  width: 90%;
+  width: 60%;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.featured__item .price {
+  font-family: "VT323";
+  font-size: 2.5rem;
 }
 
 .header {
