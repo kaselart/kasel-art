@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import image from "../look_img/image5.jpg";
 export default function FeaturedItemPreview({ item }) {
   return (
-    <Link className="featured__item" to={`/shop/${item.title}`}>
+    <Link className="featured__item" to="/">
       <div className="featured__item-img">
         <img src={image} alt="" />
       </div>

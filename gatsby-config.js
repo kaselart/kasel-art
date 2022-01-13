@@ -71,7 +71,7 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "Fernando Leyra",
-    description: "Spanish actor and artist Fernando Leyra",
+    title: "Kasel Art",
+    description: "American artist Mike Kasel",
   },
 };
