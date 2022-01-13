@@ -1,0 +1,37 @@
+.featured__item {
+  min-height: 15rem;
+  height: 22vw;
+  width: 22vw;
+  min-width: 12rem;
+  min-height: 12rem;
+  max-width: 19rem;
+  max-height: 19rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-img {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    img {
+      aspect-ratio: 1/1;
+      width: 85%;
+      height: auto;
+      object-fit: cover;
+      opacity: 0.25;
+    }
+  }
+  &-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+  }
+  .title {
+    width: 90%;
+  }
+}

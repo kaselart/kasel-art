@@ -14,6 +14,7 @@ html {
 body {
   height: 100vh;
   box-sizing: border-box;
+  font-family: "RobotoMono";
 }
 
 .visually-hidden {
@@ -25,4 +26,10 @@ body {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+a,
+a:link,
+a:visited {
+  color: a.$color-white;
+  text-decoration: none;
 }

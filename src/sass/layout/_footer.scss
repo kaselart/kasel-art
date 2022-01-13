@@ -1,5 +1,7 @@
 @use "../abstracts/" as a;
 .footer {
+  position: absolute;
+  bottom: 0;
   font-family: "RobotoMono";
   height: a.$height-footer;
   display: flex;

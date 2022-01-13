@@ -1,9 +1,18 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import FeaturedItemPreview from "../components/FeaturedItemPreview";
 import "../css/App.css";
 
 export default function Home() {
+  const featuredItems = [
+    { title: "example1", img: "some url" },
+    { title: "example2", img: "some url" },
+    { title: "example3", img: "some url" },
+    { title: "example4", img: "some url" },
+    { title: "example5", img: "some url" },
+    { title: "example6", img: "some url" },
+  ];
   return (
     // <StaticQuery
     //   query={graphql`
@@ -22,7 +31,13 @@ export default function Home() {
     //   `}
     //   render={(data) => (
     <Layout>
-      <section className="home"></section>
+      <section className="home">
+        <div className="featured">
+          {featuredItems.map((item) => {
+            return <FeaturedItemPreview item={item} />;
+          })}
+        </div>
+      </section>
     </Layout>
     //   )}
     // />

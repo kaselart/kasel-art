@@ -9,5 +9,8 @@
   background-color: a.$color-dark-grey-primary;
 
   &__main {
+    position: absolute;
+    top: a.$height-header;
+    height: calc(100% - a.$height-header);
   }
 }
