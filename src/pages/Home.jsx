@@ -32,6 +32,7 @@ export default function Home() {
     //   render={(data) => (
     <Layout>
       <section className="home">
+        <h1>hello</h1>
         <div className="featured">
           {featuredItems.map((item) => {
             return <FeaturedItemPreview item={item} />;
