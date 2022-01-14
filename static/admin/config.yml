@@ -2,12 +2,15 @@ backend:
   name: git-gateway
   repo: kaselart/kasel-art
   branch: main
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
-media_library:
+
+  media_library:
   name: cloudinary
   config:
-    cloud_name: dhftn6kje
-    api_key: 933881856198218
+    cloud_name: "dhftn6kje"
+    api_key: "933881856198218"
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+
 collections:
   - name: "item" # Used in routes, e.g., /admin/collections/blog
     label: "item" # Used in the UI
