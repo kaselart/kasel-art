@@ -20,6 +20,11 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image",  allow_multiple: true,
-      media_library: { name: cloudinary, output_filename_only: true } }
+      - {
+          label: "Featured Image",
+          name: "thumbnail",
+          widget: "image",
+          allow_multiple: true,
+          media_library: { name: cloudinary, output_filename_only: true },
+        }
       - { label: "Body", name: "body", widget: "markdown" }
