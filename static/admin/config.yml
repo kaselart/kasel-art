@@ -3,7 +3,7 @@ backend:
   repo: kaselart/kasel-art
   branch: main
 
-  media_library:
+media_library:
   name: cloudinary
   config:
     cloud_name: "dhftn6kje"
