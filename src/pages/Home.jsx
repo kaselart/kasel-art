@@ -1,10 +1,10 @@
 import React from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import FeaturedItemPreview from "../components/FeaturedItemPreview";
 import "../css/App.css";
 
-export default function Home() {
+export default function Home({ data }) {
   const featuredItems = [
     { title: "example1", img: "some url" },
     { title: "example2", img: "some url" },
@@ -13,33 +13,35 @@ export default function Home() {
     { title: "example5", img: "some url" },
     { title: "example6", img: "some url" },
   ];
+  console.log(data.allMarkdownRemark.nodes);
+  const allItems = data.allMarkdownRemark.nodes;
   return (
-    // <StaticQuery
-    //   query={graphql`
-    //     query MyQuery {
-    //       allCloudinaryMedia(sort: { fields: created_at, order: DESC }) {
-    //         edges {
-    //           node {
-    //             created_at(formatString: "YYYY-MM-DD")
-    //             public_id
-    //             secure_url
-    //             id
-    //           }
-    //         }
-    //       }
-    //     }
-    //   `}
-    //   render={(data) => (
     <Layout>
       <section className="home">
         <div className="featured">
-          {featuredItems.map((item) => {
+          {allItems.map((item) => {
             return <FeaturedItemPreview item={item} />;
           })}
         </div>
       </section>
     </Layout>
-    //   )}
-    // />
   );
 }
+
+// export const query = graphql`
+//   query MyQuery {
+//     allMarkdownRemark {
+//       nodes {
+//         frontmatter {
+//           title
+//           date
+//           price
+//           medium
+//           size
+//           images
+//         }
+//         html
+//       }
+//     }
+//   }
+// `;

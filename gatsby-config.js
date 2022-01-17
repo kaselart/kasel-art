@@ -7,41 +7,22 @@ module.exports = {
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/netlifycms/cms.js`,
-        manualInit: true,
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src`,
       },
     },
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-plugin-manifest`,
-            options: {
-              name: `GatsbyJS`,
-              short_name: `GatsbyJS`,
-              start_url: `/`,
-              background_color: `#f7f0eb`,
-              theme_color: `#a2466c`,
-              display: `standalone`,
-              icon: `src/images/favicon.png`,
-            },
-          },
-        ],
-      },
-    },
+    "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
-    },
   ],
   siteMetadata: {
     title: "Kasel Art",

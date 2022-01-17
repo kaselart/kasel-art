@@ -4,27 +4,35 @@ backend:
   branch: main
 
 media_library:
-  name: cloudinary
+  name: uploadcare
   config:
-    cloud_name: dhftn6kje
-    api_key: 933881856198218
+    publicKey: c58404de6955163c1bac
+  settings:
+    defaultOperations: "/resize/200x/"
 
 media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
   - name: "item" # Used in routes, e.g., /admin/collections/blog
-    label: "item" # Used in the UI
-    folder: "content/items" # The path to the folder where the documents are stored
+    label: "Shop Item" # Used in the UI
+    folder: "src/content/items" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
-          label: "Featured Image",
-          name: "thumbnail",
+          label: "Images",
+          name: "images",
           widget: "image",
-          allow_multiple: true,
-          media_library: { name: cloudinary, output_filename_only: true },
+          media_library: { config: { multiple: true } },
         }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Medium", name: "medium", widget: "string", required: false }
+      - { label: "Size", name: "size", widget: "string", required: false }
+      - {
+          label: "Description",
+          name: "body",
+          widget: "markdown",
+          required: false,
+        }
+      - { label: "Price", name: "price", widget: "number" }
