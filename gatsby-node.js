@@ -23,7 +23,8 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       path: "/" + title,
       component: path.resolve(`./src/templates/ItemPage.jsx`),
-      context: { title: title },
+      //leave context unformatted as it has to use title in query
+      context: { title: node.frontmatter.title },
     });
   });
 };
