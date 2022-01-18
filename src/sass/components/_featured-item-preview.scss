@@ -1,48 +1,66 @@
+@use "../abstracts/" as a;
+
 .featured__item {
-  min-height: 15rem;
-  height: 22vw;
-  width: 22vw;
+  height: 33vw;
+  width: 33vw;
+  @include a.respond(mobile) {
+    height: 70vw;
+    width: 70vw;
+  }
+  @include a.respond(laptop) {
+    height: 23vw;
+    width: 23vw;
+  }
+  @include a.respond(desktop) {
+    height: 19vw;
+    width: 19vw;
+  }
   min-width: 12rem;
   min-height: 12rem;
-  max-width: 19rem;
-  max-height: 19rem;
-  margin: 1rem;
+  margin: 1.5rem;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  &:hover {
+    .featured__item {
+      &-img img {
+        transform: scale(1.02);
+        opacity: 0.5;
+      }
+      &-text {
+      }
+    }
+  }
   &-img {
-    height: 85%;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 0.5rem;
     img {
       aspect-ratio: 1/1;
-      width: 85%;
+      width: 100%;
       height: auto;
       object-fit: cover;
       opacity: 0.25;
+      transition: all 0.15s ease-in-out;
     }
   }
   &-text {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 85%;
+    transition: all 0.2s ease-in-out;
   }
   .title {
-    width: 60%;
+    //width: 60%;
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
     height: 80%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    color: a.$color-white;
   }
-  .price {
-    font-family: "VT323";
-    font-size: 2.5rem;
-  }
+  // .price {
+  //   font-family: "VT323";
+  //   font-size: 2.5rem;
+  // }
 }
