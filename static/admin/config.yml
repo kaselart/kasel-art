@@ -22,7 +22,6 @@ collections:
     label: "Shop Item" # Used in the UI
     slug: "{{fields.title}}" # Filename template, e.g., YYYY-MM-DD-title.md
     folder: "src/content/items" # The path to the folder where the documents are stored
-    path: "{{slug}}/index.mdx"
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
