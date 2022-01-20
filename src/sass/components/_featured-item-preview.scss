@@ -1,17 +1,19 @@
 @use "../abstracts/" as a;
 
 .featured__item {
+  display: flex;
+  flex-direction: column;
   min-width: 12rem;
   min-height: 12rem;
   height: 33vw;
   width: 33vw;
   margin: 1.5rem;
   @include a.respond(mobile) {
-    height: auto;
+    height: 70vw;
     width: 70vw;
   }
   @include a.respond(laptop) {
-    height: auto;
+    height: 23vw;
     width: 23vw;
   }
   @include a.respond(desktop) {
@@ -31,6 +33,7 @@
     justify-content: center;
     margin-bottom: 0.5rem;
     background-color: a.$color-medium-grey;
+
     img {
       aspect-ratio: 1/1;
       width: 100%;
@@ -39,5 +42,8 @@
       opacity: 0.5;
       transition: all 0.1s ease-in;
     }
+  }
+  &--title {
+    background-color: black;
   }
 }

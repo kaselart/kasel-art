@@ -230,6 +230,8 @@ textarea {
 }
 
 .featured__item {
+  display: flex;
+  flex-direction: column;
   min-width: 12rem;
   min-height: 12rem;
   height: 33vw;
@@ -238,13 +240,13 @@ textarea {
 }
 @media (max-width: 500px) {
   .featured__item {
-    height: auto;
+    height: 70vw;
     width: 70vw;
   }
 }
 @media (min-width: 800px) {
   .featured__item {
-    height: auto;
+    height: 23vw;
     width: 23vw;
   }
 }
@@ -271,6 +273,9 @@ textarea {
   object-fit: cover;
   opacity: 0.5;
   transition: all 0.1s ease-in;
+}
+.featured__item--title {
+  background-color: black;
 }
 
 .item-page {
