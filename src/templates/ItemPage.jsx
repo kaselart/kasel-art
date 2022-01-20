@@ -11,7 +11,8 @@ import "../css/App.css";
 export default function ItemPage({ data }) {
   const chevronLeft = <FontAwesomeIcon icon={faChevronLeft} />;
   const chevronRight = <FontAwesomeIcon icon={faChevronRight} />;
-  const { title, medium, price, images } = data.markdownRemark.frontmatter;
+  const { title, medium, price, images, size } =
+    data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
   const [counter, setCounter] = useState(1);
   const incrementCounter = () => {
@@ -30,7 +31,17 @@ export default function ItemPage({ data }) {
   };
   return (
     <Layout>
-      <section className="item-page">
+      <article className="item-page">
+        <h1 className="item-page__heading--primary">{title}</h1>
+        <h2 className="item-page__heading--secondary">{medium}</h2>
+        <h3 className="item-page__heading--tertiary">{size}</h3>
+        <div
+          className="item-page__text"
+          dangerouslySetInnerHTML={{
+            __html: html,
+          }}
+        ></div>
+
         <div className="item-page__gallery">
           <div className="item-page__image">
             {images.map((url, i) => {
@@ -54,20 +65,10 @@ export default function ItemPage({ data }) {
           </div>
         </div>
         <div className="item__buy">
-          <p className="item-page__heading--tertiary">${price}</p>
+          <p className="item-page__price">${price}</p>
           <button className="item__buy--button">buy</button>
         </div>
-        <div className="item-page__info">
-          <h1 className="item-page__heading--primary">{title}</h1>
-          <h2 className="item-page__heading--secondary">{medium}</h2>
-          <div
-            className="item-page__text"
-            dangerouslySetInnerHTML={{
-              __html: html,
-            }}
-          ></div>
-        </div>
-      </section>
+      </article>
     </Layout>
   );
 }

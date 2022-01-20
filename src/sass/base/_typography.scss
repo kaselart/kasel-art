@@ -44,9 +44,64 @@
   letter-spacing: 0.1rem;
 }
 .featured__item--title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 500;
   text-transform: uppercase;
   color: a.$color-white;
   letter-spacing: 0.1rem;
+  @include a.respond(mobile) {
+    font-size: 1.4rem;
+  }
+  @include a.respond(laptop) {
+    font-size: 1.1rem;
+  }
+  @include a.respond(desktop) {
+    font-size: 1.3rem;
+  }
+}
+//shop items
+//hero/current
+//list/grid
+
+//item page
+.item-page {
+  &__heading--primary {
+    font-family: a.$font-secondary;
+    font-size: 5rem;
+    text-transform: uppercase;
+    @include a.respond(mobile) {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+  }
+  &__heading--secondary {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    @include a.respond(mobile) {
+      font-size: 2.25rem;
+    }
+  }
+  &__heading--tertiary {
+    font-size: 2rem;
+    font-weight: 200;
+    @include a.respond(mobile) {
+      font-size: 1.8rem;
+    }
+  }
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 100;
+    @include a.respond(mobile) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+  &__price {
+    font-size: 3.5rem;
+    font-weight: 400;
+    @include a.respond(mobile) {
+      font-size: 3rem;
+    }
+  }
 }

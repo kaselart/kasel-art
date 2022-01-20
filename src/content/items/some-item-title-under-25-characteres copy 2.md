@@ -1,5 +1,5 @@
 ---
-title: Some Item Title Under 25 Characteres
+title: Some Item Title Under 25 Char
 date: 2022-01-20T17:42:53.391Z
 images:
   - https://ucarecdn.com/a6a4fb03-a5c2-46ea-a092-57b6902f253e/-/resize/200x/

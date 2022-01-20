@@ -7,5 +7,4 @@ medium: Something cool
 size: Some size 13 x 12
 price: 155
 ---
-
 Check this description out. It is appropriate. It is cool. Wow wow ow.

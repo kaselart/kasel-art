@@ -3,17 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSkullCrossbones } from "@fortawesome/free-solid-svg-icons";
 
-const instagramIcon = <FontAwesomeIcon icon={faInstagram} />;
-const skullCrossbonesIcon = <FontAwesomeIcon icon={faSkullCrossbones} />;
+const instagramIcon = (
+  <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+);
+const skullCrossbonesIcon = (
+  <FontAwesomeIcon icon={faSkullCrossbones} className="social-icon" />
+);
 
 export default function Socials() {
   return (
     <div className="socials">
-      <a href="https://www.instagram.com/kaselart" className="social-icon">
-        {instagramIcon}
-      </a>
+      <a href="https://www.instagram.com/kaselart">{instagramIcon}</a>
 
-      <span className="social-icon">{skullCrossbonesIcon}</span>
+      <span>{skullCrossbonesIcon}</span>
     </div>
   );
 }

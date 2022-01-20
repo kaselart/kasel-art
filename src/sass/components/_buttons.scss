@@ -1,16 +1,17 @@
 @use "../abstracts/" as a;
+button {
+  color: a.$color-white;
+  border: none;
+  background-color: #aca7cb;
+}
 .btn--menu {
   background-color: transparent;
-  border: none;
 }
 .btn--submit {
   min-width: 13.5rem;
   width: 13.5rem;
   display: flex;
   justify-content: center;
-  border: none;
-  background-color: #aca7cb;
-  color: a.$color-white;
   height: 5rem;
   font-weight: 600;
   font-size: 1.8rem;
@@ -26,51 +27,58 @@
     letter-spacing: 0.15rem;
   }
 }
-.btn--showcase-close {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  z-index: 12;
-  border-radius: 0;
-  border: none;
-  background-color: a.$color-black;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.075s ease-out;
-}
-.btn--toggle-description {
-  position: absolute;
-  bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  // border: solid;
-  // border-color: a.$color-white;
-  border-width: 1px;
-  padding: 1rem;
-  background-color: a.$color-black;
-  color: a.$color-white;
-  height: 3rem;
-
+.item__buy--button {
+  width: 10rem;
+  height: 5rem;
+  margin: 0.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  font-size: 1.8rem;
-  font-variant: small-caps;
-  letter-spacing: 0.1rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    transform: translateY(-0.1rem) scale(0.98);
-    letter-spacing: 0.15rem;
-    font-size: 2rem;
-  }
-  &:active {
-    transform: translateY(0.1rem) scale(0.98);
-    letter-spacing: 0.15rem;
-    font-size: 2rem;
-  }
 }
+// .btn--showcase-close {
+//   position: absolute;
+//   right: 1rem;
+//   top: 1rem;
+//   z-index: 12;
+//   border-radius: 0;
+//   border: none;
+//   background-color: a.$color-black;
+//   width: 2.5rem;
+//   height: 2.5rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   transition: all 0.075s ease-out;
+// }
+// .btn--toggle-description {
+//   position: absolute;
+//   bottom: 1rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border: none;
+//   // border: solid;
+//   // border-color: a.$color-white;
+//   border-width: 1px;
+//   padding: 1rem;
+//   background-color: a.$color-black;
+//   color: a.$color-white;
+//   height: 3rem;
+
+//   font-weight: 800;
+//   font-size: 1.8rem;
+//   font-variant: small-caps;
+//   letter-spacing: 0.1rem;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in;
+
+//   &:hover {
+//     transform: translateY(-0.1rem) scale(0.98);
+//     letter-spacing: 0.15rem;
+//     font-size: 2rem;
+//   }
+//   &:active {
+//     transform: translateY(0.1rem) scale(0.98);
+//     letter-spacing: 0.15rem;
+//     font-size: 2rem;
+//   }
+// }

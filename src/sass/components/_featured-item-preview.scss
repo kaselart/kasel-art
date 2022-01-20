@@ -1,24 +1,23 @@
 @use "../abstracts/" as a;
 
 .featured__item {
-  display: flex;
-  flex-direction: column;
   min-width: 12rem;
   min-height: 12rem;
-  height: 33vw;
-  width: 33vw;
-  margin: 1.5rem;
+  height: 30vw;
+  width: 30vw;
+  margin: 2.5rem 1.5rem;
+
   @include a.respond(mobile) {
-    height: 70vw;
-    width: 70vw;
+    height: 65vw;
+    width: 65vw;
   }
   @include a.respond(laptop) {
-    height: 23vw;
-    width: 23vw;
-  }
-  @include a.respond(desktop) {
     height: 19vw;
     width: 19vw;
+  }
+  @include a.respond(desktop) {
+    height: 15vw;
+    width: 15vw;
   }
   &:hover {
     .featured__item-img {
@@ -32,7 +31,6 @@
     display: flex;
     justify-content: center;
     margin-bottom: 0.5rem;
-    background-color: a.$color-medium-grey;
 
     img {
       aspect-ratio: 1/1;
@@ -44,6 +42,5 @@
     }
   }
   &--title {
-    background-color: black;
   }
 }
