@@ -2,12 +2,11 @@
 .footer {
   position: absolute;
   bottom: 0;
-  font-family: "RobotoMono";
   height: a.$height-footer;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: a.$color-black-25;
+  background-color: #282828;
   width: 100%;
   &__text {
     color: a.$color-white;

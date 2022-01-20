@@ -87,26 +87,6 @@ export default function Contact() {
               <p className="form__error-message">{errors.email.message}</p>
             )}
           </div>
-          {/* <div className="form__element">
-            <label className="visually-hidden" htmlFor="telephone">
-              telephone number:
-            </label>
-            <input
-              name="tel"
-              type="text"
-              placeholder="telephone (optional)"
-              {...register("tel", {
-                minLength: { value: 7, message: "must be at least 7 digits" },
-                pattern: {
-                  value: /^([0-9]*)$/,
-                  message: "enter a valid telephone number",
-                },
-              })}
-            />
-            {errors.tel && (
-              <p className="form__error-message">{errors.tel.message}</p>
-            )}
-          </div> */}
           <div className="form__element">
             <label className="visually-hidden" htmlFor="comments">
               questions or comments:

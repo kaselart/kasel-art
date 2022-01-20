@@ -1,12 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../components/Layout";
 import { navigate } from "gatsby-link";
 import "../css/App.css";
 
 export default function thanks() {
-  const smiley = <FontAwesomeIcon icon={faSmile} />;
   const navigateHome = () => {
     setTimeout(() => navigate("/"), 6000);
   };
@@ -19,7 +16,6 @@ export default function thanks() {
         <p className="thanks__text">
           Your questions and/or comments have been received.
         </p>
-        <p className="thanks__smiley">{smiley}</p>
       </section>
     </Layout>
   );

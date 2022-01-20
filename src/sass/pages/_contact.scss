@@ -1,104 +1,30 @@
 @use "../abstracts/" as a;
 .contact {
-  font-family: "RobotoMono";
   margin-top: calc(#{a.$height-header + 5rem});
-  @include a.respond(mobile) {
-    margin-top: -(a.$height-header);
-  }
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include a.respond(mobile) {
+    margin-top: 5rem;
+  }
   &__form {
     display: flex;
     flex-direction: column;
     padding: 0.5rem 0;
-    color: a.$color-white;
-    font-size: 1.8rem;
-    font-weight: 800;
-    // .form__element:nth-child(3n) .form__error-message {
-    //   animation: spacing 2s ease-in-out infinite;
-    // }
-    // .form__element:nth-child(4n) {
-    //   animation: spacing 2.5s ease-in-out infinite;
-    // }
-    // .form__element:nth-child(5n) {
-    //   animation: spacing 3s ease-in-out infinite;
-    // }
 
     .form__element {
+      position: relative;
       display: flex;
       flex-direction: column;
       padding: 0.5rem 0 1rem 0;
-      position: relative;
-    }
-    label {
-      color: a.$color-white;
-      margin-bottom: 0.5rem;
-      font-weight: 400;
-      letter-spacing: 0.25rem;
-      padding: 0rem 0.25rem 0.25rem 0.25rem;
     }
     .form__error-message {
-      display: flex;
       position: absolute;
       bottom: 1.25rem;
-      color: a.$color-error;
-      font-size: 1.25rem;
-      font-weight: 200;
+      margin-left: 1.15rem;
+      background-color: a.$color-white;
       pointer-events: none;
       user-select: none;
-      background-color: a.$color-white;
-      margin-left: 1rem;
     }
-    @keyframes spacing {
-      0% {
-        letter-spacing: 0.125rem;
-        font-size: 1.2rem;
-      }
-
-      50% {
-        letter-spacing: 0.175rem;
-        font-size: 1.25rem;
-      }
-
-      100% {
-        letter-spacing: 0.125rem;
-        font-size: 1.2rem;
-      }
-    }
-  }
-  &__heading-primary {
-    padding: 0.5rem 0 0 0;
-    color: a.$color-white;
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: 0.5rem;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-  &__heading-secondary,
-  &__heading-secondary--underline {
-    padding: 0.5rem 0 0 0;
-    color: a.$color-white;
-    font-size: 2.2rem;
-    font-weight: 200;
-    letter-spacing: 0.5rem;
-    text-align: center;
-    margin-top: 3rem;
-  }
-  &__heading-secondary--underline {
-    text-decoration: underline;
-    font-size: 2rem;
-    font-weight: 800;
-    opacity: 0.75;
-    margin: 0 0 1rem 0;
-    transition: transform 0.2s ease;
-    letter-spacing: 0.26rem;
-    &:hover {
-      transform: scale(102%);
-    }
-  }
-  .btn--submit {
-    margin-top: 0.5rem;
   }
 }

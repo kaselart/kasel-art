@@ -1,15 +1,22 @@
 //colors
 $color-black: #000000;
-$color-black-10: rgba(0, 0, 0, 0.1);
-$color-black-25: rgba(0, 0, 0, 0.25);
-
-$color-black-50: rgba(0, 0, 0, 0.5);
-$color-black-75: rgba(0, 0, 0, 0.75);
-
-$color-dark-grey-primary: #353535;
+// $color-black-10: rgba(0, 0, 0, 0.1);
+// $color-black-25: rgba(0, 0, 0, 0.25);
+// $color-black-50: rgba(0, 0, 0, 0.5);
+// $color-black-75: rgba(0, 0, 0, 0.75);
 $color-white: #ffffff;
 
+//color palette
+$color-dark-grey: #353535;
+$color-purple-grey: #787586;
+$color-purple-light: #aca7cb;
+$color-medium-grey: #cccccc;
+$color-light-grey: #f2f2f2;
+
 $color-error: rgba(204, 61, 36, 0.959);
+//fonts
+$font-primary: "RobotoMono";
+$font-secondary: "VT323";
 //layout
 $height-header: 9rem;
 $height-footer: 4rem;

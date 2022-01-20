@@ -1,0 +1,117 @@
+@use "../abstracts/" as a;
+
+.item-page {
+  width: 95vw;
+  max-width: 75rem;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 5vw;
+  @include a.respond(mobile) {
+    width: 80vw;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  &__info {
+    position: relative;
+    height: 100%;
+    max-height: 35rem;
+    width: 55%;
+    @include a.respond(mobile) {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: a.$color-white;
+  }
+  &__gallery {
+    position: relative;
+    height: 100%;
+    max-height: 35rem;
+    width: 45%;
+    @include a.respond(mobile) {
+      width: 100%;
+      padding: 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+  }
+  &__image {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      margin: 0.5rem;
+    }
+    img.active {
+    }
+    img.inactive {
+      display: none;
+    }
+  }
+  &__heading--primary {
+    font-size: 3.5rem;
+    @include a.respond(mobile) {
+      font-size: 2.5rem;
+    }
+    font-family: a.$font-secondary;
+  }
+  &__heading--secondary {
+    font-size: 2rem;
+    @include a.respond(mobile) {
+      font-size: 1.6rem;
+    }
+    font-style: italic;
+    font-weight: 200;
+  }
+  &__heading--tertiary {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    color: a.$color-white;
+  }
+  &__text {
+    font-size: 1.4rem;
+    @include a.respond(mobile) {
+      font-size: 1.2rem;
+    }
+    font-weight: 100;
+  }
+}
+.gallery__navigation {
+  position: absolute;
+  width: 110%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+}
+.gallery__button {
+  color: a.$color-white;
+  border: none;
+  background-color: transparent;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.item__buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.item__buy--button {
+  border: none;
+  background-color: a.$color-white;
+  width: 8rem;
+  height: 4rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: a.$color-dark-grey;
+}

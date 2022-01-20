@@ -1,7 +1,6 @@
 @use "../abstracts/" as a;
 
 .shop {
-  font-family: "RobotoMono";
   height: calc(100vh - #{a.$height-header});
   display: flex;
   flex-direction: column;

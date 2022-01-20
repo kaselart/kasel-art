@@ -31,8 +31,8 @@ export default function Header({ menuOpen, toggleMenu, closeMenu, openMenu }) {
         </button>
       </div>
       <Link className="header__link" to="/">
-        <div className="header__logo-container">
-          <h1 className="header__logo-text">KASEL</h1>
+        <div className="header__logo--container">
+          <h1 className="header__logo--text">KASEL</h1>
           <img src={logo} className="header__logo-img" alt="logo" />
         </div>
       </Link>

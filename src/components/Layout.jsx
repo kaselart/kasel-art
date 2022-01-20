@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Socials from "./Socials";
-//import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +11,6 @@ export default function Layout({ children }) {
 
   return (
     <section className="layout">
-      <Socials></Socials>
       <Header
         menuOpen={menuOpen}
         toggleMenu={toggleMenu}
@@ -20,7 +18,7 @@ export default function Layout({ children }) {
         openMenu={openMenu}
       ></Header>
       <section className="layout__main">{children}</section>
-      {/* <Navbar /> */}
+      <Socials></Socials>
       <Footer></Footer>
     </section>
   );

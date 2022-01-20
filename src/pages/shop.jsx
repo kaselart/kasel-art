@@ -7,7 +7,6 @@ export default function Shop() {
     <Layout>
       <section className="shop">
         <h1 className="shop__heading-primary">SHOP</h1>
-
         <h1 className="shop__heading-primary">COMING SOON</h1>
       </section>
     </Layout>

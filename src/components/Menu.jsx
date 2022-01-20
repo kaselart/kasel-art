@@ -15,10 +15,10 @@ export default function Menu({ menuOpen, closeMenu }) {
   return (
     <section className={!menuOpen ? "menu" : "menu open"}>
       <div ref={menuRef} className="menu__navlinks">
-        <Link className="menu__link" to="/shop" activeClassName="active">
+        <Link className="menu__navlink" to="/shop" activeClassName="active">
           SHOP
         </Link>
-        <Link className="menu__link" to="/contact" activeClassName="active">
+        <Link className="menu__navlink" to="/contact" activeClassName="active">
           CONTACT
         </Link>
       </div>

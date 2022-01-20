@@ -1,57 +1,41 @@
 @use "../abstracts/" as a;
 .header {
-  height: a.$height-header;
+  position: fixed;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: a.$height-header;
+  width: 100%;
+  padding: 3rem;
+  background-color: a.$color-dark-grey;
   @include a.respond(mobile) {
     position: relative;
     justify-content: center;
     padding: 0;
   }
-  padding: 3rem;
-  align-items: center;
-  background-color: a.$color-black-25;
-  position: fixed;
-  width: 100%;
-  z-index: 9;
-
-  &__link {
-    text-decoration: none;
-  }
-  &__logo-container {
-    @include a.respond(mobile) {
-      transform: scale(0.8);
-    }
+  &__logo--container {
     position: relative;
     display: flex;
     align-items: center;
     height: a.$height-header;
+    @include a.respond(mobile) {
+      transform: scale(0.8);
+    }
     &:hover {
-      .header__logo-text {
+      .header__logo--text {
+        font-size: 5.5rem;
         color: a.$color-white;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: a.$color-black;
-        font-size: 5.5rem;
+        -webkit-text-stroke-color: a.$color-dark-grey;
       }
     }
   }
   &__logo {
-    &-text {
-      width: 100%;
-      text-align: center;
-      font-family: VT323;
-      font-size: 5.7rem;
-      color: a.$color-white;
+    &--text {
       position: absolute;
-      transition: all 0.2s ease-in-out;
-      //bottom: 0;
       left: 52%;
+      width: 100%;
       transform: translate(-50%, 0%);
-      line-height: 0.96;
-      letter-spacing: 0.75rem;
-      &:active {
-        transform: translate(-52%, 2%);
-      }
     }
     @include a.respond(mobile) {
       font-size: 2.375rem;
@@ -59,39 +43,27 @@
     @include a.respond(smallmobile) {
       font-size: 2rem;
     }
+    //logo background img
     &-img {
       height: a.$height-header;
+      margin: 1rem;
+      padding: 0.5rem;
       object-fit: contain;
       opacity: 0.5;
       filter: invert(100%);
-      margin: 1rem;
-      padding: 0.5rem;
-    }
-    &:active {
-      transform: translateY(0.1rem) scale(0.98);
     }
   }
   &__navlinks {
     display: flex;
     align-items: center;
     @include a.respond(mobile) {
+      //hide navlinks on mobile, they are shown in menu
       display: none;
     }
   }
   &__navlink {
-    color: a.$color-white;
-    font-size: 2rem;
-    font-family: RobotoMono;
     margin-right: 3rem;
     transition: all 0.1s ease-in;
-    text-decoration: none;
-
-    &:hover {
-      letter-spacing: 0.15rem;
-    }
-    &.active {
-      color: #aca7cb;
-    }
   }
 }
 
