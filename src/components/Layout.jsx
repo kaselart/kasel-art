@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
   const openMenu = () => setMenuOpen(true);
-
+  console.log(menuOpen);
   return (
     <section className="layout">
       <Header
