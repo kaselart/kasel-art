@@ -4,6 +4,16 @@ input.btn--submit {
   color: a.$color-white;
   border: none;
   background-color: #aca7cb;
+  cursor: pointer;
+  text-transform: uppercase;
+  &:hover {
+    transform: translateY(-0.1rem) scale(0.98);
+    letter-spacing: 0.15rem;
+  }
+  &:active {
+    transform: translate(1px, 1px) scale(0.98);
+    letter-spacing: 0.15rem;
+  }
 }
 .btn--menu {
   position: absolute;
@@ -22,18 +32,9 @@ input.btn--submit {
   height: 5rem;
   font-weight: 600;
   font-size: 1.8rem;
-  cursor: pointer;
+
   transition: all 0.1s ease-in;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    transform: translateY(-0.1rem) scale(0.98);
-    letter-spacing: 0.15rem;
-  }
-  &:active {
-    transform: translate(1px, 1px) scale(0.98);
-    letter-spacing: 0.15rem;
-  }
 }
 .item__buy--button {
   width: 8rem;

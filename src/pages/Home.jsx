@@ -10,8 +10,10 @@ export default function Home({ data }) {
     <Layout>
       <section className="home">
         <div className="featured">
-          {allItems.map((item) => {
-            return <FeaturedItemPreview item={item} />;
+          {allItems.map((item, i) => {
+            if (i < 8) {
+              return <FeaturedItemPreview item={item} />;
+            }
           })}
         </div>
       </section>

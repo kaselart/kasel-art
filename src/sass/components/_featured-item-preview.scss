@@ -1,23 +1,21 @@
 @use "../abstracts/" as a;
 
 .featured__item {
-  min-width: 12rem;
-  min-height: 12rem;
-  height: 30vw;
-  width: 30vw;
-  margin: 2.5rem 1.5rem;
+  height: 15rem;
+  width: 15rem;
+  margin: 2.5rem;
 
   @include a.respond(mobile) {
-    height: 65vw;
-    width: 65vw;
+    height: 22rem;
+    width: 22rem;
   }
   @include a.respond(laptop) {
-    height: 19vw;
-    width: 19vw;
+    height: 18rem;
+    width: 18rem;
   }
   @include a.respond(desktop) {
-    height: 15vw;
-    width: 15vw;
+    height: 20rem;
+    width: 20rem;
   }
   &:hover {
     .featured__item-img {

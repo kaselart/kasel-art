@@ -7,7 +7,7 @@
   height: a.$height-header;
   width: 100%;
   padding: 3rem;
-  background-color: a.$color-dark-grey;
+  background-color: a.$color-super-dark-grey;
   @include a.respond(mobile) {
     position: relative;
     justify-content: center;
@@ -64,5 +64,17 @@
   &__navlink {
     margin-right: 3rem;
     transition: all 0.1s ease-in;
+  }
+}
+.caret-icon {
+  display: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  &.open {
+    pointer-events: none;
+    transform: rotate(90deg);
+  }
+  @include a.respond(mobile) {
+    display: block;
   }
 }

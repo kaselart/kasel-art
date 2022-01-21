@@ -18,18 +18,18 @@
   }
 }
 .social-icon {
-  font-size: 5rem;
+  font-size: 3.75rem;
   color: a.$color-medium-grey;
   padding: 0.5rem;
   cursor: pointer;
   transition: all 0.1s ease-in;
   &:hover {
-    font-size: 3.75rem;
+    font-size: 4rem;
   }
   @include a.respond(mobile) {
-    font-size: 4rem;
+    font-size: 3.25rem;
     &:hover {
-      font-size: 3.25rem;
+      font-size: 3.5rem;
     }
   }
 }

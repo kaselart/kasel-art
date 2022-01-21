@@ -27,7 +27,12 @@ export default function Header({ menuOpen, toggleMenu, closeMenu, openMenu }) {
         </Link>
       </div>
 
-      <button onClick={handleClick} className="btn--menu caret-icon">
+      <button
+        onClick={handleClick}
+        className={
+          menuOpen ? "btn--menu caret-icon open" : "btn--menu caret-icon"
+        }
+      >
         {chevronRight}
       </button>
       <Link className="header__link" to="/">

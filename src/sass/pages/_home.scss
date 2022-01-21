@@ -3,19 +3,17 @@
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
   width: 100vw;
-  padding: 2rem 0;
 }
 .featured {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 100%;
+  height: calc(100% - #{a.$height-header - #{a.$height-footer}});
+  padding: 3rem;
+  overflow-y: scroll;
   margin-bottom: 5rem;
-  padding: 0 2vw;
-  overflow: scroll;
 }

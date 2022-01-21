@@ -1,11 +1,12 @@
 @use "../abstracts/" as a;
 
 .shop {
-  height: calc(100vh - #{a.$height-header});
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: calc(100vh - #{a.$height-header});
+  margin-top: a.$height-header;
+  padding: 3rem;
   &__heading-primary {
     //margin-top: 10rem;
 

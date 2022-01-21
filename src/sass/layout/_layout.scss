@@ -16,6 +16,6 @@
     align-items: center;
     width: 100%;
     height: calc(100% - a.$height-header);
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
