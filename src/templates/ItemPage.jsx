@@ -63,8 +63,12 @@ export default function ItemPage({ data }) {
               {chevronRight}
             </button>
           </div>
+          <div className="item__buy default">
+            <p className="item-page__price">${price}</p>
+            <button className="item__buy--button">buy</button>
+          </div>
         </div>
-        <div className="item__buy">
+        <div className="item__buy mobile">
           <p className="item-page__price">${price}</p>
           <button className="item__buy--button">buy</button>
         </div>

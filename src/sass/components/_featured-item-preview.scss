@@ -22,7 +22,7 @@
   &:hover {
     .featured__item-img {
       img {
-        opacity: 0.75;
+        opacity: 0.9;
         transition: all 0.25s ease-out;
       }
     }
@@ -39,6 +39,9 @@
       object-fit: cover;
       opacity: 0.5;
       transition: all 0.1s ease-in;
+      @include a.respond(mobile) {
+        opacity: 0.9;
+      }
     }
   }
   &--title {

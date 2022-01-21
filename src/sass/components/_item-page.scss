@@ -1,14 +1,23 @@
 @use "../abstracts/" as a;
 
 .item-page {
+  position: absolute;
   display: flex;
-  max-width: 75rem;
-  padding: 4rem 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80%;
+  min-height: 40rem;
+  width: 90%;
+  max-width: 90rem;
+  padding: 4rem 2rem;
   @include a.respond(mobile) {
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+    height: auto;
     width: 80vw;
     margin-bottom: 5rem;
+    padding: 4rem 1rem;
   }
   //order
   //    title
@@ -19,14 +28,16 @@
   //      -price
   //      -button
   &__heading--primary {
-    width: 100%;
-    padding: 0.5rem;
+    width: 50%;
+    max-width: 35rem;
+    padding: 0.5rem 0;
     @include a.respond(mobile) {
+      width: 100%;
       order: 1;
     }
   }
   &__heading--secondary {
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     @include a.respond(mobile) {
       order: 2;
     }
@@ -37,8 +48,11 @@
     }
   }
   &__text {
-    padding: 0.5rem;
+    width: 50%;
+    max-width: 32rem;
+    padding: 0.5rem 0;
     @include a.respond(mobile) {
+      width: 100%;
       order: 5;
     }
   }
@@ -49,18 +63,21 @@
     position: relative;
     display: flex;
     justify-content: center;
-    height: 100%;
+    max-width: 28rem;
+    height: 70%;
     max-height: 35rem;
-    padding: 1.5rem;
     @include a.respond(mobile) {
+      width: 100%;
       order: 4;
     }
   }
   &__image {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
     height: 100%;
-    width: auto;
+    width: 32vw;
+    min-width: 20rem;
+    max-width: 33rem;
     img {
       height: 100%;
       width: 100%;
@@ -76,23 +93,40 @@
     top: 50%;
     display: flex;
     justify-content: space-between;
-    width: 130%;
+    width: 110%;
   }
   .gallery__button {
     font-size: 3rem;
-    color: a.$color-white;
+    color: a.$color-purple-grey;
     background-color: transparent;
     border: none;
     cursor: pointer;
   }
 }
 .item__buy {
+  position: absolute;
+  bottom: -7rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  width: 70%;
+  min-width: 20rem;
+  max-width: 33rem;
   margin: 0.5rem;
+  &.mobile {
+    display: none;
+  }
   @include a.respond(mobile) {
+    flex-direction: column;
+    position: static;
+    width: 100%;
     order: 6;
+    &.mobile {
+      display: flex;
+    }
+    &.default {
+      display: none;
+    }
   }
 }
 

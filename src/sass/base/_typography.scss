@@ -67,7 +67,7 @@
 .item-page {
   &__heading--primary {
     font-family: a.$font-secondary;
-    font-size: 5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     @include a.respond(mobile) {
       font-size: 3.5rem;
@@ -75,7 +75,7 @@
     }
   }
   &__heading--secondary {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     font-style: italic;
     @include a.respond(mobile) {
@@ -83,7 +83,7 @@
     }
   }
   &__heading--tertiary {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 200;
     @include a.respond(mobile) {
       font-size: 1.8rem;
@@ -91,17 +91,18 @@
   }
   &__text {
     font-size: 1.5rem;
-    font-weight: 100;
+    font-weight: 200;
     @include a.respond(mobile) {
-      font-size: 1.8rem;
+      font-size: 1.25rem;
       text-align: center;
     }
   }
   &__price {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
+    color: a.$color-medium-grey;
     @include a.respond(mobile) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 }
