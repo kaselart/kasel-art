@@ -4,6 +4,7 @@ import Home from "./Home";
 import "../css/App.css";
 
 export default function IndexPage({ data }) {
+  console.log(data);
   return (
     <>
       <title>{"MIKE KASEL | artist"}</title>
