@@ -15,6 +15,9 @@ body {
   height: 100vh;
   box-sizing: border-box;
   font-family: a.$font-primary;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .visually-hidden {

@@ -14,6 +14,6 @@
   flex-wrap: wrap;
   height: calc(100% - #{a.$height-header - #{a.$height-footer}});
   padding: 3rem;
-  overflow-y: scroll;
+
   margin-bottom: 5rem;
 }

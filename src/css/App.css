@@ -15,6 +15,9 @@ body {
   box-sizing: border-box;
   font-family: "RobotoMono";
 }
+body ::-webkit-scrollbar {
+  display: none;
+}
 
 .visually-hidden {
   border: 0;
@@ -683,7 +686,6 @@ input.btn--submit:active {
   flex-wrap: wrap;
   height: calc(100% - 9rem-4rem);
   padding: 3rem;
-  overflow-y: scroll;
   margin-bottom: 5rem;
 }
 
