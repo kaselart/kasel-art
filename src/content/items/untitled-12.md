@@ -1,5 +1,5 @@
 ---
-title: "Untitled #12"
+title: Untitled 12
 date: 2022-01-21T22:04:24.512Z
 images:
   - https://ucarecdn.com/cb3ac5dc-19a7-4842-9798-f87060d99e7d/-/resize/400x/
