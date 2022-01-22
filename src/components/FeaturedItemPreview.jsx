@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { removeSpaces } from "../utils/stringUtils";
 export default function FeaturedItemPreview({ item }) {
-  console.log(item);
   return (
     <div className="featured__item">
       <Link

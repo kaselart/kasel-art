@@ -31,53 +31,48 @@ export default function ItemPage({ data }) {
   };
   return (
     <Layout>
-      {data ? (
-        <article className="item-page">
-          <h1 className="item-page__heading--primary">{title}</h1>
-          <h2 className="item-page__heading--secondary">{medium}</h2>
-          <h3 className="item-page__heading--tertiary">{size}</h3>
-          <div
-            className="item-page__text"
-            dangerouslySetInnerHTML={{
-              __html: html,
-            }}
-          ></div>
+      <article className="item-page">
+        <h1 className="item-page__heading--primary">{title}</h1>
+        <h2 className="item-page__heading--secondary">{medium}</h2>
+        <h3 className="item-page__heading--tertiary">{size}</h3>
+        <div
+          className="item-page__text"
+          dangerouslySetInnerHTML={{
+            __html: html,
+          }}
+        ></div>
 
-          <div className="item-page__gallery">
-            <div className="item-page__image">
-              {images.map((url, i) => {
-                if (counter === i + 1) {
-                  return <img className="active" src={url} />;
-                } else {
-                  return <img className="inactive" src={url} />;
-                }
-              })}
-            </div>
-            <div className="gallery__navigation">
-              <button
-                onClick={decrementCounter}
-                className="gallery__button left"
-              >
-                {chevronLeft}
-              </button>
-              <button
-                onClick={incrementCounter}
-                className="gallery__button right"
-              >
-                {chevronRight}
-              </button>
-            </div>
-            <div className="item__buy default">
-              <p className="item-page__price">${price}</p>
-              <button className="item__buy--button">buy</button>
-            </div>
+        <div className="item-page__gallery">
+          <div className="item-page__image">
+            {images.map((url, i) => {
+              if (counter === i + 1) {
+                return <img className="active" src={url} />;
+              } else {
+                return <img className="inactive" src={url} />;
+              }
+            })}
           </div>
-          <div className="item__buy mobile">
+          <div className="gallery__navigation">
+            <button onClick={decrementCounter} className="gallery__button left">
+              {chevronLeft}
+            </button>
+            <button
+              onClick={incrementCounter}
+              className="gallery__button right"
+            >
+              {chevronRight}
+            </button>
+          </div>
+          <div className="item__buy default">
             <p className="item-page__price">${price}</p>
             <button className="item__buy--button">buy</button>
           </div>
-        </article>
-      ) : null}
+        </div>
+        <div className="item__buy mobile">
+          <p className="item-page__price">${price}</p>
+          <button className="item__buy--button">buy</button>
+        </div>
+      </article>
     </Layout>
   );
 }

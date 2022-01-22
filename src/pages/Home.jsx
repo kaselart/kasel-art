@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import FeaturedItemPreview from "../components/FeaturedItemPreview";
 import "../css/App.css";
