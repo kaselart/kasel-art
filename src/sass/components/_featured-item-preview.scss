@@ -1,9 +1,9 @@
 @use "../abstracts/" as a;
 
 .featured__item {
-  height: 15rem;
-  width: 15rem;
-  margin: 2.5rem;
+  height: 19rem;
+  width: 19rem;
+  margin: 2rem auto;
 
   @include a.respond(mobile) {
     height: 22rem;

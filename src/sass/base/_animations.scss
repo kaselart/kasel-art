@@ -1,1 +1,59 @@
 @use "../abstracts/" as a;
+
+.glitch {
+  position: absolute;
+  transition: all 0.1s ease-in-out;
+  &:before,
+  &:after {
+    display: block;
+    content: attr(data-glitch);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+  }
+  &:after {
+    color: a.$color-light-grey;
+    z-index: -2;
+  }
+  &:before {
+    color: a.$color-purple-light;
+    z-index: -1;
+  }
+  &:hover {
+    transform: scale(1.05);
+    &:before {
+      animation: glitch 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1;
+    }
+    &:after {
+      animation: glitch 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 1;
+    }
+  }
+  &:active {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  to {
+    transform: translate(0);
+  }
+}

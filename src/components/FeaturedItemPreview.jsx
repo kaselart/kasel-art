@@ -6,7 +6,7 @@ export default function FeaturedItemPreview({ item }) {
     <div className="featured__item">
       <Link
         className="featured__item-img"
-        to={"/" + removeSpaces(item.frontmatter.title)}
+        to={"/shop/" + removeSpaces(item.frontmatter.title)}
       >
         <img src={item.frontmatter.images[0]} alt="" />
       </Link>

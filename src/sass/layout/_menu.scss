@@ -2,33 +2,35 @@
 
 .menu {
   position: absolute;
-  top: a.$height-header;
+  top: 0;
+  right: 0;
+  height: a.$height-header;
   display: none;
-  width: 100vw;
-  padding: 0rem 2rem 1rem 2rem;
+  width: calc(100vw - #{a.$width-menu-toggle});
   background-color: transparent;
-  transform: translateX(-100vw);
+  transform: translateX(-120vw);
   transition: transform 0.5s ease-in-out, background-color 0.4s linear 0.15s;
-  z-index: 2;
   @include a.respond(mobile) {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    z-index: 5;
   }
   &.open {
+    background-color: a.$color-super-dark-grey;
     transform: translateX(0);
     transition: transform 0.2s ease-in-out,
       background-color 0.1s ease-in-out 0.1s;
-    background-color: a.$color-super-dark-grey;
   }
   &__navlinks {
     display: flex;
     align-items: center;
-    margin-top: 1rem;
+
+    padding: 3rem;
   }
   &__navlink {
     transition: all 0.1s ease-in;
     &:not(:last-child) {
-      margin-right: 3rem;
+      margin-right: 1rem;
     }
   }
 }

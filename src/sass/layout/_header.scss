@@ -3,54 +3,25 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   height: a.$height-header;
   width: 100%;
-  padding: 3rem;
+  min-width: 32rem;
+  padding: 0.5rem 2rem;
   background-color: a.$color-super-dark-grey;
   @include a.respond(mobile) {
-    position: relative;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0;
   }
-  &__logo--container {
+  &__logo {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
     height: a.$height-header;
+    width: 20rem;
     @include a.respond(mobile) {
-      transform: scale(0.8);
-    }
-    &:hover {
-      .header__logo--text {
-        font-size: 5.5rem;
-        color: a.$color-white;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: a.$color-dark-grey;
-      }
-    }
-  }
-  &__logo {
-    &--text {
-      position: absolute;
-      left: 52%;
-      width: 100%;
-      transform: translate(-50%, 0%);
-    }
-    @include a.respond(mobile) {
-      font-size: 2.375rem;
-    }
-    @include a.respond(smallmobile) {
-      font-size: 2rem;
-    }
-    //logo background img
-    &-img {
-      height: a.$height-header;
-      margin: 1rem;
-      padding: 0.5rem;
-      object-fit: contain;
-      opacity: 0.5;
-      filter: invert(100%);
+      align-items: center;
     }
   }
   &__navlinks {
@@ -62,19 +33,38 @@
     }
   }
   &__navlink {
-    margin-right: 3rem;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
     transition: all 0.1s ease-in;
   }
 }
-.caret-icon {
+.spacer {
+  height: a.$height-header;
+  width: a.$width-menu-toggle;
   display: none;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  &.open {
-    pointer-events: none;
-    transform: rotate(90deg);
-  }
   @include a.respond(mobile) {
     display: block;
   }
+}
+.btn--menu {
+  height: a.$height-header;
+  width: a.$width-menu-toggle;
+  display: none;
+  &.open {
+    height: 100%;
+    pointer-events: none;
+    .caret-icon {
+      transform: rotate(90deg);
+    }
+  }
+  @include a.respond(mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.caret-icon {
+  transition: all 0.1s ease-in-out;
+  margin-bottom: 0.25rem;
 }

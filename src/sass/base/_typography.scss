@@ -1,14 +1,18 @@
 @use "../abstracts/" as a;
-.header__logo--text {
-  font-family: a.$font-secondary;
-  font-size: 5.7rem;
-  color: a.$color-white;
-  text-align: center;
-  line-height: 0.96;
-  letter-spacing: 0.75rem;
+.header__logo {
+  //TESTING FONT FAMILY
+  font-family: "Share Tech Mono";
+  .glitch {
+    font-size: 2.5rem;
+    color: a.$color-white;
+    letter-spacing: 0.5rem;
+    @include a.respond(mobile) {
+      font-size: 2.5rem;
+    }
+  }
 }
 .header__navlink {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: a.$color-white;
   &:hover {
     letter-spacing: 0.15rem;
@@ -18,7 +22,7 @@
   }
 }
 .menu__navlink {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: a.$color-white;
   &:hover {
     letter-spacing: 0.15rem;

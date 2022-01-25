@@ -21,7 +21,7 @@ exports.createPages = async function ({ actions, graphql }) {
   data.allMarkdownRemark.nodes.forEach((node) => {
     const title = removeSpaces(node.frontmatter.title);
     actions.createPage({
-      path: "/" + title,
+      path: "/shop/" + title,
       component: path.resolve(`./src/templates/ItemPage.jsx`),
       //leave context unformatted as it has to use title in query
       context: { title: node.frontmatter.title },

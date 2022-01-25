@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import Menu from "./Menu";
-import logo from "../images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 export default function Header({ menuOpen, toggleMenu, closeMenu, openMenu }) {
-  const chevronRight = <FontAwesomeIcon icon={faChevronRight} />;
+  const chevronRight = (
+    <FontAwesomeIcon icon={faChevronRight} className="caret-icon" />
+  );
   const handleClick = () => {
     if (!menuOpen) {
       openMenu();
@@ -14,6 +15,20 @@ export default function Header({ menuOpen, toggleMenu, closeMenu, openMenu }) {
   return (
     <div className="header">
       <Menu closeMenu={closeMenu} menuOpen={menuOpen}></Menu>
+
+      <button
+        onClick={handleClick}
+        className={menuOpen ? "btn--menu open" : "btn--menu"}
+      >
+        {chevronRight}
+      </button>
+      <Link className="header__link" to="/">
+        <div className="header__logo">
+          <h1 className="glitch" data-glitch="MIKE KASEL">
+            MIKE KASEL
+          </h1>
+        </div>
+      </Link>
       <div className="header__navlinks">
         <Link className="header__navlink" to="/shop" activeClassName="active">
           SHOP
@@ -25,22 +40,11 @@ export default function Header({ menuOpen, toggleMenu, closeMenu, openMenu }) {
         >
           CONTACT
         </Link>
+        <Link className="header__navlink" to="/" activeClassName="active">
+          HOME
+        </Link>
       </div>
-
-      <button
-        onClick={handleClick}
-        className={
-          menuOpen ? "btn--menu caret-icon open" : "btn--menu caret-icon"
-        }
-      >
-        {chevronRight}
-      </button>
-      <Link className="header__link" to="/">
-        <div className="header__logo--container">
-          <h1 className="header__logo--text">KASEL</h1>
-          <img src={logo} className="header__logo-img" alt="logo" />
-        </div>
-      </Link>
+      <div className="spacer"></div>
     </div>
   );
 }
