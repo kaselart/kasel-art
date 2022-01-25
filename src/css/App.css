@@ -407,6 +407,7 @@ input.btn--submit:active {
   max-width: 90rem;
   padding: 2rem;
   margin: 5rem 0rem;
+  overflow-x: scroll;
 }
 @media (max-width: 500px) {
   .item-page {
@@ -572,6 +573,12 @@ input.btn--submit:active {
     display: none;
   }
 }
+.header__link {
+  opacity: 1;
+}
+.header__link .hidden {
+  opacity: 0;
+}
 .header__navlink {
   transition: all 0.1s ease-in;
 }
@@ -652,7 +659,7 @@ input.btn--submit:active {
 .menu.open {
   background-color: #282828;
   transform: translateX(0);
-  transition: transform 0.2s ease-in-out, background-color 0.1s ease-in-out 0.1s;
+  transition: transform 0.3s ease-in-out 0.1s;
 }
 .menu__navlinks {
   display: flex;
@@ -731,7 +738,6 @@ input.btn--submit:active {
   height: 100%;
   width: 100vw;
   min-width: 26rem;
-  margin-top: 3rem;
   overflow-x: scroll;
 }
 

@@ -13,6 +13,7 @@
   max-width: 90rem;
   padding: 2rem;
   margin: 5rem 0rem;
+  overflow-x: scroll;
 
   @include a.respond(mobile) {
     flex-direction: column;

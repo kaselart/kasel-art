@@ -22,7 +22,10 @@ export default function Header({ menuOpen, toggleMenu, closeMenu, openMenu }) {
       >
         {chevronRight}
       </button>
-      <Link className="header__link" to="/">
+      <Link
+        className={!menuOpen ? "header__link" : "header__link hidden"}
+        to="/"
+      >
         <div className="header__logo">
           <h1 className="glitch" data-glitch="MIKE KASEL">
             MIKE KASEL

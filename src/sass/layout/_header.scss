@@ -32,6 +32,12 @@
       display: none;
     }
   }
+  &__link {
+    opacity: 1;
+    .hidden {
+      opacity: 0;
+    }
+  }
   &__navlink {
     &:not(:last-child) {
       margin-right: 2rem;
