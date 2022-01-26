@@ -11,22 +11,25 @@
   overflow-x: scroll;
 }
 .featured {
-  width: 70%;
-  max-width: 46rem;
-  display: grid;
-  grid-gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr;
   height: calc(100% - #{a.$height-header - #{a.$height-footer}});
-  @include a.respond(mobile) {
-    grid-template-columns: 1fr;
+  &__grid {
     width: 100%;
+    max-width: 46rem;
+    display: grid;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 10rem;
+    @include a.respond(mobile) {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    @include a.respond(laptop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      max-width: 90rem;
+    }
   }
-  @include a.respond(laptop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 95%;
-    max-width: 90rem;
-  }
-  margin-bottom: 10rem;
 }

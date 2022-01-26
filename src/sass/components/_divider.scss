@@ -1,0 +1,21 @@
+@use "../abstracts/" as a;
+
+.divider {
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+  background-color: a.$color-purple-grey;
+  width: 85vw;
+  height: 10px;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  padding: 0.5px 1rem;
+  @include a.respond(laptop) {
+    width: 93vw;
+  }
+  &__text {
+    position: absolute;
+    bottom: 0.1rem;
+    left: 0;
+  }
+}

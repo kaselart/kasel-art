@@ -111,3 +111,10 @@
     }
   }
 }
+.divider__text {
+  font-family: a.$font-secondary;
+  text-transform: uppercase;
+  color: a.$color-purple-light;
+  font-weight: 200;
+  font-size: 2rem;
+}

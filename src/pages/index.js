@@ -2,6 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import FeaturedItemPreview from "../components/FeaturedItemPreview";
+import Divider from "../components/Divider";
 import "../css/App.css";
 
 export default function Home({ data }) {
@@ -11,12 +12,15 @@ export default function Home({ data }) {
       <title>{"MIKE KASEL | artist"}</title>
       <Layout>
         <section className="home">
+          <Divider text="recent work" />
           <div className="featured">
-            {allItems.map((item, i) => {
-              if (i < 8) {
-                return <FeaturedItemPreview item={item} />;
-              }
-            })}
+            <section className="featured__grid">
+              {allItems.map((item, i) => {
+                if (i < 8) {
+                  return <FeaturedItemPreview item={item} />;
+                }
+              })}
+            </section>
           </div>
         </section>
       </Layout>
