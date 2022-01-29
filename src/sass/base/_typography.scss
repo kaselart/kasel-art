@@ -50,10 +50,11 @@
 }
 .featured__item--title {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   color: a.$color-white;
-  letter-spacing: 0.1rem;
+  text-align: center;
+  letter-spacing: 2px;
   @include a.respond(mobile) {
     font-size: 1.4rem;
   }
@@ -112,9 +113,9 @@
   }
 }
 .divider__text {
-  font-family: a.$font-secondary;
   text-transform: uppercase;
-  color: a.$color-purple-light;
-  font-weight: 200;
-  font-size: 2rem;
+  color: a.$color-purple-grey;
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
 }

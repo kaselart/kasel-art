@@ -3,19 +3,26 @@
 .divider {
   position: relative;
   display: inline-block;
-  align-self: flex-start;
-  background-color: a.$color-purple-grey;
   width: 85vw;
-  height: 10px;
+  max-width: 39rem;
+  height: 5px;
   margin-top: 5rem;
-  margin-left: 3rem;
-  padding: 0.5px 1rem;
+  @include a.respond(mobile) {
+    max-width: 22rem;
+  }
+  @include a.respond(laptop) {
+    max-width: 75rem;
+  }
   @include a.respond(laptop) {
     width: 93vw;
   }
   &__text {
     position: absolute;
-    bottom: 0.1rem;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
   }
 }

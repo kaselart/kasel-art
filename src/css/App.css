@@ -158,10 +158,11 @@ p {
 
 .featured__item--title {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: 0.1rem;
+  text-align: center;
+  letter-spacing: 2px;
 }
 @media (max-width: 500px) {
   .featured__item--title {
@@ -231,11 +232,11 @@ p {
 }
 
 .divider__text {
-  font-family: "VT323";
   text-transform: uppercase;
-  color: #aca7cb;
-  font-weight: 200;
-  font-size: 2rem;
+  color: #787586;
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
 }
 
 .fa-times__close {
@@ -545,13 +546,20 @@ input.btn--submit:active {
 .divider {
   position: relative;
   display: inline-block;
-  align-self: flex-start;
-  background-color: #787586;
   width: 85vw;
-  height: 10px;
+  max-width: 39rem;
+  height: 5px;
   margin-top: 5rem;
-  margin-left: 3rem;
-  padding: 0.5px 1rem;
+}
+@media (max-width: 500px) {
+  .divider {
+    max-width: 22rem;
+  }
+}
+@media (min-width: 800px) {
+  .divider {
+    max-width: 75rem;
+  }
 }
 @media (min-width: 800px) {
   .divider {
@@ -560,8 +568,12 @@ input.btn--submit:active {
 }
 .divider__text {
   position: absolute;
-  bottom: 0.1rem;
-  left: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
 }
 
 .header {
@@ -677,7 +689,7 @@ input.btn--submit:active {
   width: calc(100vw - 6rem);
   background-color: transparent;
   transform: translateX(-120vw);
-  transition: transform 0.5s ease-in-out, background-color 0.4s linear 0.15s;
+  transition: transform 0.1s linear, background-color 0.4s linear 0.15s;
 }
 @media (max-width: 500px) {
   .menu {
@@ -689,7 +701,7 @@ input.btn--submit:active {
 .menu.open {
   background-color: #282828;
   transform: translateX(0);
-  transition: transform 0.3s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s;
 }
 .menu__navlinks {
   display: flex;

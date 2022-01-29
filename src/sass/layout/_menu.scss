@@ -9,7 +9,7 @@
   width: calc(100vw - #{a.$width-menu-toggle});
   background-color: transparent;
   transform: translateX(-120vw);
-  transition: transform 0.5s ease-in-out, background-color 0.4s linear 0.15s;
+  transition: transform 0.1s linear, background-color 0.4s linear 0.15s;
   @include a.respond(mobile) {
     display: flex;
     justify-content: flex-end;
@@ -18,7 +18,7 @@
   &.open {
     background-color: a.$color-super-dark-grey;
     transform: translateX(0);
-    transition: transform 0.3s ease-in-out 0.1s;
+    transition: transform 0.1s ease-in-out 0.1s;
   }
   &__navlinks {
     display: flex;
