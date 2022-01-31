@@ -6,6 +6,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../components/Layout";
+import Checkout from "../components/checkout";
 import "../css/App.css";
 
 export default function ItemPage({ data }) {
@@ -28,6 +29,10 @@ export default function ItemPage({ data }) {
     } else {
       setCounter(images.length);
     }
+  };
+
+  const handleSubmit = () => {
+    console.log("go to stripe");
   };
   return (
     <Layout>
@@ -65,12 +70,15 @@ export default function ItemPage({ data }) {
           </div>
           <div className="item__buy default">
             <p className="item-page__price">${price}</p>
-            <button className="item__buy--button">buy</button>
+            <Checkout priceId="price_1KNL20EfvJ1fyk2sKTW0HnGZ"></Checkout>
           </div>
         </div>
         <div className="item__buy mobile">
           <p className="item-page__price">${price}</p>
-          <button className="item__buy--button">buy</button>
+          {/* <button className="item__buy--button" onClick={handleSubmit}>
+            buy
+          </button> */}
+          <Checkout priceId="price_1KNL20EfvJ1fyk2sKTW0HnGZ"></Checkout>
         </div>
       </article>
     </Layout>
